@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+        p {
+            color: orange;
+            border: black;
+            font-family: cursive;
+        }
+
+        h1 {
+            font-style: italic;
+            background-color: black;
+            color: rgb(255, 0, 0);
+        }
+
+        h3 {
+            font-style: oblique
+        }
+
+        button {
+            background-color: orchid;
+            color: yellowgreen;
+        }
+
+        .answer {
+            color: Green;
+        }
+
+        #signOff {
+            color: red;
+            background-color: teal;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        
+        var userName = prompt('Whats is your name?');
+        alert('Hi ' + userName + ' welcome.');
+        console.log('When asked their name, the user responded ' + userName);
+
+        var tvShow = prompt('What\'s your favorite tv show?');
+        alert(userName + ', ' + tvShow + ' is an excellent choice of entertainment!');
+        console.log('When the user was asked their favorite tv show, they responded with ' + tvShow);
+
+        var foodChoice = prompt('What is your favorite snack?');
+        alert('Yummm. So ' +userName + ', you\'re going to watch ' + tvShow + ' while eating ' + foodChoice + ' that sounds delicious.');
+        console.log('When the user was asked their favorite snack, they responded with ' + foodChoice);
+
+        var drinkChoice = prompt('What\'s your favorite drink?');
+        alert('Wow ' + userName + ', not only are you watching ' + tvShow + ', which is an amazing show. But you\'re eating ' + foodChoice + ' and drinking  ' + drinkChoice + ', that is quite the relaxation routine.');
+        console.log('The user was asked if the skip commercials and said ' + drinkChoice);
+        
+    </script>
+</head>
+<body>
+    <main>
+    <h1>Class 1 Lab</h1>
+    <p style="color:thistle;">This would be a great opportunity to get to know you, glad you've answered the questions so far.</p>
+    <br>
+    <h3>Question 1</h3>
+    <p style="color:wheat; background-color:whitesmoke">What is your name?</p>
+    <p id="q1" class="answer"></p>
+    <button type="button" onclick = "document.getElementById('q1') .innerHTML =  userName; " >Reveal your answer...</button>
+    <br>
+    <h3>Question 2</h3>
+    <p style="color:yellow; background-color: bisque">What's your favorite tv show?</p>
+    <p id="q2" class="answer"></p>
+    <button type="button" onclick = "document.getElementById('q2') .innerHTML =  tvShow; " >Reveal your answer...</button>
+    <br>
+    <h3>Question 3</h3>
+    <p style="color:cadetblue; background-color:cornflowerblue;">What is your favorite food?</p>
+    <p id="q3" class="answer"></p>
+    <button type="button" onclick = "document.getElementById('q3') .innerHTML =  foodChoice; " >Reveal your answer...</button>
+    <br>
+    <h3>Question 4</h3>
+    <p style="color:darkgreen; background-color: khaki;">What's your favorite drink?</p>
+    <p id="q4" class="answer"></p>  
+    <button type="button" onclick = "document.getElementById('q4') .innerHTML =  drinkChoice; " >Reveal your answer...</button>
+    <br>
+    </main>
+    <footer>
+        <p id="signOff">This has been a production by <strong>William Fritts</strong></p>
+    </footer>
+</body>
+</html>
