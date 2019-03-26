@@ -13,8 +13,10 @@ var answerOne = prompt(questions[0]);
 answerOne = answerOne.toLowerCase();
 if (answerOne === 'y' || answerOne === 'yes') {
   alert('Awseome ' + userName + ', I\'m glad we\'ve met.');
-} else {
+} else if(answerOne === 'n' || answerOne === 'no'){
   alert('Unfortunately ' + userName + ', you dont know me well.');
+} else {
+  alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
 }
 console.log(userName + ' answered question 1 (' + questions[0] + ') as ' + answerOne);
 
@@ -23,8 +25,10 @@ var answerTwo = prompt(questions[1]);
 answerTwo = answerTwo.toLowerCase();
 if (answerTwo === 'y' || answerTwo === 'yes') {
   alert('Unfortunately ' + userName + ', I don\'t think we\'ve talked much yet.');
-} else {
+} else if(answerTwo === 'n' || answerTwo === 'no'){
   alert('Correct ' + userName + ', we must have talked some already.'); 
+} else {
+  alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
 }
 console.log(userName + ' answered question 2 (' + questions[1] + ') as ' + answerTwo);
 
@@ -33,8 +37,10 @@ var answerThree = prompt(questions[2]);
 answerThree = answerThree.toLowerCase();
 if (answerThree === 'y' || answerThree === 'yes') {
   alert('Awseome ' + userName + ', I\'m glad we\'ve met.');
-} else {
+} else if(answerThree === 'n' || answerThree === 'no'){
   alert('Unfortunately ' + userName + ', you dont know me well.');
+} else {
+  alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
 }
 console.log(userName + ' answered question 3 (' + questions[2] + ') as ' + answerThree);
 
@@ -43,8 +49,10 @@ var answerFour = prompt(questions[3]);
 answerFour = answerFour.toLowerCase();
 if (answerFour === 'y' || answerFour === 'yes') {
   alert('Awseome ' + userName + ', you are correct.');
-} else {
+} else if(answerFour === 'n' || answerFour === 'no'){
   alert('Unfortunately ' + userName + ', you dont know me well.');
+} else {
+  alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
 }
 console.log(userName + ' answered question 4 (' + questions[3] + ') as ' + answerFour);
 
@@ -53,8 +61,10 @@ var answerFive = prompt(questions[4]);
 answerFive = answerFive.toLowerCase();
 if (answerFive === 'y' || answerFive === 'yes') {
   alert('Awseome ' + userName + ', well I hope it was deliciouis ');
-} else {
+} else if(answerFive === 'n' || answerFive === 'no'){
   alert('Unfortunately ' + userName + ', that is something we will have to fix.');
+} else {
+  alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
 }
 console.log(userName + ' answered question 5 (' + questions[4] + ') as ' + answerFive);
 
