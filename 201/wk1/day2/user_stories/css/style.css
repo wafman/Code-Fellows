@@ -1,0 +1,58 @@
+html {
+  background-image: url('/img/iron-throne.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  text-decoration: underline;
+  color: whitesmoke;
+  padding: 5px;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 2.5em;
+
+  text-align: center;
+  color: whitesmoke;
+  padding: 5px;
+  margin: 10px;
+}
+
+h5 {
+  font-size: 1.75em;
+  text-align: left;
+  color: whitesmoke;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+
+}
+
+p {
+  font-size: 1em;
+  text-align: left;
+  color: white;
+  margin: 5px;
+  text-align: center;
+}
+
+footer {
+  color: red;
+  text-align: center;
+  margin: 20px;
+}
+
+footer p {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
