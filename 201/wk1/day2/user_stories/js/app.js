@@ -4,7 +4,25 @@
 var userName = prompt('What is your name?');
 
 //setting questions array, for easy swapping out of questions
-var questions = ['Do you know my name?', 'Am I new to coding?', 'Have I studied HTML before?', 'Have I studied JavaScript before?', 'Have we had lunch before?']
+var places = [
+  'oregon', 
+  'idaho', 
+  'california',
+  'utah',
+  'nevada',
+  'wyomiong',
+  'colorado',
+  'texas',
+  'georgia'
+]
+var questions = [
+  'Do you know my name?', 
+  'Am I new to coding?', 
+  'Have I studied HTML before?', 
+  'Have I studied JavaScript before?', 
+  'Have we had lunch before?',
+  'How old am I?',
+]
 
 //establishing answer variables, changing to lowercase and establishing logic.
 
@@ -67,6 +85,53 @@ if (answerFive === 'y' || answerFive === 'yes') {
   alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
 }
 console.log(userName + ' answered question 5 (' + questions[4] + ') as ' + answerFive);
+
+//test for for looping all questions
+// var answers = [];
+// var isCorrect;
+
+// for( var i = 0; i < questions.length; i++){
+//   answers[i] = prompt(questions[i]);
+//   answers[i] = answers[i].toLowerCase();
+//   if(answers[i] === 'y' || answers[i] === 'yes'){
+//     alert(userName + ' your answer of ' + answers[i] + ' is ' + isCorrect)
+//   }
+// }
+
+//question 6
+var userAnswer;
+var limit = 4;
+var userGuesses = 0;
+while( userAnswer !== 30 && userGuesses < limit) {
+  userAnswer = prompt(questions[5]);
+  console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+  if (userAnswer === null) {
+    alert('must enter a number');
+    userGuesses++;
+    console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+  } else if (userAnswer < 30){
+    console.log('too low');
+    userGuesses++;
+    alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4')
+    console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+  } else if ( userAnswer > 30){
+    console.log('too high');
+    userGuesses++;
+    alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.')
+    console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+  } else {
+    console.log('correct answer');
+    alert('You guessed correct');
+    userGuesses++;
+    console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+    break;
+  }
+}
+
+
+//question 7
+
+
 
 
 //All DOM Manipulation
