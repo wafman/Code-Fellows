@@ -128,9 +128,27 @@ while( userAnswer !== 30 && userGuesses < limit) {
   }
 }
 
-
 //question 7
+var questSevenLimit = 6;
+var userQsevenAnswer;
+var userGuess = 0;
+while(userGuess < questSevenLimit){
+  userQsevenAnswer = prompt('What states have I visited?');
 
+  for(var s = 0; s < places.length; s++){
+    if(userQsevenAnswer === places[s]){
+      console.log('correct ansser');
+      alert('correct!');
+      break;
+    } else {
+      continue;
+    }
+  }
+  userGuess++;
+  console.log('wrong answer' + userGuess + ' of 6 guesses');
+  alert('your guess of ' + userQsevenAnswer + ' is wrong. You have used ' + userGuess + ' of 6 guesses.');
+  
+}
 
 
 
