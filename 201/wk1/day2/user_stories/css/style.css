@@ -1,7 +1,8 @@
 body {
-  background-image: url('/img/iron-throne.jpg');
+  /* background-image: url('/img/iron-throne.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
+  background-color:peru;
 }
 
 body {
@@ -25,6 +26,15 @@ h3 {
   margin: 10px;
 }
 
+h4 {
+  font-size: 2.15em;
+  text-align: center;
+  color: whitesmoke;
+  padding: 5px;
+  margin: 10px;
+  text-decoration: underline;
+}
+
 h5 {
   font-size: 1.75em;
   text-align: left;
@@ -43,21 +53,60 @@ p {
   text-align: center;
 }
 
+ul {
+  list-style: disc;
+  margin: 20px;
+  padding: 20px;
+}
+
+ol {
+  list-style: decimal;
+  margin: 20px;
+  padding: 20px;
+}
+
 footer {
-  color: red;
+  color: burlywood;
   text-align: center;
   margin: 20px;
+  border: 2px solid black;
 }
 
 footer p {
-  color: red;
+  color: burlywood;
   text-align: center;
   font-weight: bold;
   text-decoration: underline;
+}
+
+div {
+  display: inline-block;
 }
 
 #closer {
   text-align: center;
   text-decoration: none;
   font-size: 0.3em;
+}
+
+#score {
+  color: green;
+  background-color: yellow;
+}
+
+.about_me {
+  border: 2px solid black;
+  margin: 25px;
+  padding: 10px;
+}
+
+.allLists {
+  display: inline-block;
+  border: 2px solid black;
+  margin: 25px;
+  padding: 10px;
+}
+
+.questions_answers {
+  border: 2px solid black;
 }
