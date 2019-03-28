@@ -58,12 +58,34 @@ ul {
   list-style: disc;
   margin: 20px;
   padding: 20px;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+ul li {
+  color: blue;
+  list-style-position: inside;
+  text-align: left;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 ol {
   list-style: decimal;
   margin: 20px;
   padding: 20px;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+ol li {
+  color: blue;
+  list-style-position: inside;
+  text-align: left;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 footer {
@@ -107,6 +129,7 @@ div {
   border: 2px solid black;
   margin: 25px;
   padding: 10px;
+
 }
 
 .allLists h4 {
@@ -120,6 +143,7 @@ div {
   height: 200px;
   display: inherit;
   vertical-align: text-top;
+  border: 2px dotted blue;
 }
 
 .allLists ol {
@@ -127,6 +151,7 @@ div {
   height: 200px;
   display: inherit;
   vertical-align: text-top;
+  border: 2px dotted blue;
 }
 
 .questions_answers {
