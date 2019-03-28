@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-position: center; */
   background-color:peru;
+  width: 1000px;
 }
 
 body {
@@ -106,6 +107,26 @@ div {
   border: 2px solid black;
   margin: 25px;
   padding: 10px;
+}
+
+.allLists h4 {
+  width: 1000px;
+  height: 50px;
+  text-align: center;
+}
+
+.allLists ul {
+  width: 250px;
+  height: 200px;
+  display: inherit;
+  vertical-align: text-top;
+}
+
+.allLists ol {
+  width: 250px;
+  height: 200px;
+  display: inherit;
+  vertical-align: text-top;
 }
 
 .questions_answers {
