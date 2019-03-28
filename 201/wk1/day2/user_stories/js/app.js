@@ -102,6 +102,7 @@ console.log(userName + ' answered question 5 (' + questions[4] + ') as ' + answe
 var userAnswer;
 var limit = 4;
 var userGuesses = 0;
+var guessArrayq6 = [];
 while( userAnswer !== 30 && userGuesses < limit) {
   userAnswer = prompt(questions[5]);
   console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
@@ -132,22 +133,31 @@ while( userAnswer !== 30 && userGuesses < limit) {
 var questSevenLimit = 6;
 var userQsevenAnswer;
 var userGuess = 0;
+var continueGame = true;
 while(userGuess < questSevenLimit){
   userQsevenAnswer = prompt('What states have I visited?');
-
   for(var s = 0; s < places.length; s++){
     if(userQsevenAnswer === places[s]){
       console.log('correct ansser');
       alert('correct!');
+      continueGame = false;
       break;
     } else {
       continue;
     }
   }
-  userGuess++;
-  console.log('wrong answer' + userGuess + ' of 6 guesses');
-  alert('your guess of ' + userQsevenAnswer + ' is wrong. You have used ' + userGuess + ' of 6 guesses.');
-  
+  if(continueGame === false){
+    userGuess++;
+    console.log('correct answer, break while loop');
+    break;
+  } else {
+    userGuess++;
+    console.log('wrong answer' + userGuess + ' of 6 guesses');
+    alert('your guess of ' + userQsevenAnswer + ' is wrong. You have used ' + userGuess + ' of 6 guesses.');
+    continue;
+  }
+
+
 }
 
 
