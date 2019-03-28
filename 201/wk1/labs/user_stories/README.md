@@ -7,3 +7,5 @@ Expanding About me section so a user can get to know me better.
 
 Expanded the user question area to reflect all the questions they've been asked and what they answered, as well as a total score for their answers.
 
+Pair programming with Jorie!
+
