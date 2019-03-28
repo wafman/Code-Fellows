@@ -103,19 +103,20 @@ var userAnswer;
 var limit = 4;
 var userGuesses = 0;
 var guessArrayq6 = [];
-while( userAnswer !== 30 && userGuesses < limit) {
+var answer = 30;
+while( userAnswer !== answer && userGuesses < limit) {
   userAnswer = prompt(questions[5]);
   console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
   if (userAnswer === null) {
     alert('must enter a number');
     userGuesses++;
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-  } else if (userAnswer < 30){
+  } else if (userAnswer < answer){
     console.log('too low');
     userGuesses++;
     alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4')
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-  } else if ( userAnswer > 30){
+  } else if ( userAnswer > answer){
     console.log('too high');
     userGuesses++;
     alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.')
@@ -127,6 +128,7 @@ while( userAnswer !== 30 && userGuesses < limit) {
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
     break;
   }
+  guessArrayq6.push(userAnswer)
 }
 
 //question 7
@@ -134,6 +136,7 @@ var questSevenLimit = 6;
 var userQsevenAnswer;
 var userGuess = 0;
 var continueGame = true;
+guessArrayq7 = [];
 while(userGuess < questSevenLimit){
   userQsevenAnswer = prompt('What states have I visited?');
   for(var s = 0; s < places.length; s++){
@@ -146,6 +149,7 @@ while(userGuess < questSevenLimit){
       continue;
     }
   }
+  guessArrayq7.push(userQsevenAnswer);
   if(continueGame === false){
     userGuess++;
     console.log('correct answer, break while loop');
@@ -156,8 +160,7 @@ while(userGuess < questSevenLimit){
     alert('your guess of ' + userQsevenAnswer + ' is wrong. You have used ' + userGuess + ' of 6 guesses.');
     continue;
   }
-
-
+  
 }
 
 
@@ -165,17 +168,25 @@ while(userGuess < questSevenLimit){
 //All DOM Manipulation
 document.getElementById('greeting').innerHTML = 'Welcome, ' + userName + ', let\'s see how well you know me...';
 
-document.getElementById('q1').innerHTML = questions[0]
-document.getElementById('a1').innerHTML = answerOne
+document.getElementById('q1').innerHTML = questions[0];
+document.getElementById('a1').innerHTML = answerOne;
 
-document.getElementById('q2').innerHTML = questions[1]
-document.getElementById('a2').innerHTML = answerTwo
+document.getElementById('q2').innerHTML = questions[1];
+document.getElementById('a2').innerHTML = answerTwo;
 
-document.getElementById('q3').innerHTML = questions[2]
-document.getElementById('a3').innerHTML = answerThree
+document.getElementById('q3').innerHTML = questions[2];
+document.getElementById('a3').innerHTML = answerThree;
 
-document.getElementById('q4').innerHTML = questions[3]
-document.getElementById('a4').innerHTML = answerFour
+document.getElementById('q4').innerHTML = questions[3];
+document.getElementById('a4').innerHTML = answerFour;
 
-document.getElementById('q5').innerHTML = questions[4]
-document.getElementById('a5').innerHTML = answerFive
+document.getElementById('q5').innerHTML = questions[4];
+document.getElementById('a5').innerHTML = answerFive;
+
+document.getElementById('q6').innerHTML = questions[5];
+document.getElementById('g6').innerHTML = guessArrayq6;
+document.getElementById('a6').innerHTML = answer;
+
+document.getElementById('q7').innerHTML = userQsevenAnswer;
+document.getElementById('g7').innerHTML = guessArrayq7;
+document.getElementById('a6').innerHTML = places;
