@@ -89,6 +89,8 @@ div {
 }
 
 #score {
+  font-size: 2em;
+  font-weight: bold;
   color: green;
   background-color: yellow;
 }
@@ -115,5 +117,5 @@ div {
 }
 
 .guess {
-  color: red;
+  color: rgb(113, 19, 175);
 }
