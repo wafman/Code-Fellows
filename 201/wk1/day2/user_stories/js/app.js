@@ -25,12 +25,15 @@ var questions = [
   'What states have I visited?'
 ]
 
+var correctAnswers = 0;
+
 //establishing answer variables, changing to lowercase and establishing logic.
 
 //question 1
 var answerOne = prompt(questions[0]);
 answerOne = answerOne.toLowerCase();
 if (answerOne === 'y' || answerOne === 'yes') {
+  correctAnswers++;
   alert('Awseome ' + userName + ', I\'m glad we\'ve met.');
 } else if(answerOne === 'n' || answerOne === 'no'){
   alert('Unfortunately ' + userName + ', you dont know me well.');
@@ -45,6 +48,7 @@ answerTwo = answerTwo.toLowerCase();
 if (answerTwo === 'y' || answerTwo === 'yes') {
   alert('Unfortunately ' + userName + ', I don\'t think we\'ve talked much yet.');
 } else if(answerTwo === 'n' || answerTwo === 'no'){
+  correctAnswers++;
   alert('Correct ' + userName + ', we must have talked some already.'); 
 } else {
   alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
@@ -55,6 +59,7 @@ console.log(userName + ' answered question 2 (' + questions[1] + ') as ' + answe
 var answerThree = prompt(questions[2]);
 answerThree = answerThree.toLowerCase();
 if (answerThree === 'y' || answerThree === 'yes') {
+  correctAnswers++;
   alert('Awseome ' + userName + ', I\'m glad we\'ve met.');
 } else if(answerThree === 'n' || answerThree === 'no'){
   alert('Unfortunately ' + userName + ', you dont know me well.');
@@ -67,6 +72,7 @@ console.log(userName + ' answered question 3 (' + questions[2] + ') as ' + answe
 var answerFour = prompt(questions[3]);
 answerFour = answerFour.toLowerCase();
 if (answerFour === 'y' || answerFour === 'yes') {
+  correctAnswers++;
   alert('Awseome ' + userName + ', you are correct.');
 } else if(answerFour === 'n' || answerFour === 'no'){
   alert('Unfortunately ' + userName + ', you dont know me well.');
@@ -79,6 +85,7 @@ console.log(userName + ' answered question 4 (' + questions[3] + ') as ' + answe
 var answerFive = prompt(questions[4]);
 answerFive = answerFive.toLowerCase();
 if (answerFive === 'y' || answerFive === 'yes') {
+  correctAnswers++;
   alert('Awseome ' + userName + ', well I hope it was deliciouis ');
 } else if(answerFive === 'n' || answerFive === 'no'){
   alert('Unfortunately ' + userName + ', that is something we will have to fix.');
@@ -125,6 +132,7 @@ while( userAnswer !== answer && userGuesses < limit) {
   } else {
     console.log('correct answer');
     alert('You guessed correct');
+    correctAnswers++;
     userGuesses++;
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
     guessArrayq6.push(userAnswer);
@@ -143,7 +151,8 @@ while(userGuess < questSevenLimit){
   userQsevenAnswer = prompt(questions[6]);
   for(var s = 0; s < places.length; s++){
     if(userQsevenAnswer === places[s]){
-      console.log('correct ansser');
+      correctAnswers++;
+      console.log('correct answer');
       alert('correct!');
       continueGame = false;
       break;
@@ -192,3 +201,5 @@ document.getElementById('a6').innerHTML = 'correct answer: ' + answer;
 document.getElementById('q7').innerHTML = questions[6];
 document.getElementById('g7').innerHTML = 'Your answers: ' + guessArrayq7;
 document.getElementById('a7').innerHTML = 'correct possible answers: ' + places;
+
+document.getElementById('score').innerHTML = 'You\'ve finished the quiz and gotten ' + correctAnswers + ' out of 7 questions correct';
