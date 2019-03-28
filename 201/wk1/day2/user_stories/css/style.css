@@ -109,3 +109,11 @@ div {
 .questions_answers {
   border: 2px solid black;
 }
+
+.answer {
+  color: green;
+}
+
+.guess {
+  color: red;
+}
