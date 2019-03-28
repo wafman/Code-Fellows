@@ -14,7 +14,7 @@ var places = [
   'colorado',
   'texas',
   'georgia'
-]
+];
 var questions = [
   'Do you know my name?', 
   'Am I new to coding?', 
@@ -23,7 +23,7 @@ var questions = [
   'Have we had lunch before?',
   'How old am I?',
   'What states have I visited?'
-]
+];
 
 var correctAnswers = 0;
 
@@ -49,7 +49,7 @@ if (answerTwo === 'y' || answerTwo === 'yes') {
   alert('Unfortunately ' + userName + ', I don\'t think we\'ve talked much yet.');
 } else if(answerTwo === 'n' || answerTwo === 'no'){
   correctAnswers++;
-  alert('Correct ' + userName + ', we must have talked some already.'); 
+  alert('Correct ' + userName + ', we must have talked some already.');
 } else {
   alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
 }
@@ -122,12 +122,12 @@ while( userAnswer !== answer && userGuesses < limit) {
   } else if (userAnswer < answer){
     console.log('too low');
     userGuesses++;
-    alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4')
+    alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4');
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
   } else if ( userAnswer > answer){
     console.log('too high');
     userGuesses++;
-    alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.')
+    alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.');
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
   } else {
     console.log('correct answer');
@@ -138,7 +138,7 @@ while( userAnswer !== answer && userGuesses < limit) {
     guessArrayq6.push(userAnswer);
     break;
   }
-  guessArrayq6.push(userAnswer)
+  guessArrayq6.push(userAnswer);
 }
 
 //question 7
@@ -171,7 +171,6 @@ while(userGuess < questSevenLimit){
     alert('your guess of ' + userQsevenAnswer + ' is wrong. You have used ' + userGuess + ' of 6 guesses.');
     continue;
   }
-  
 }
 
 
