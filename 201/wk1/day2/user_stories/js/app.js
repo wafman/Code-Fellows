@@ -22,6 +22,7 @@ var questions = [
   'Have I studied JavaScript before?', 
   'Have we had lunch before?',
   'How old am I?',
+  'What states have I visited?'
 ]
 
 //establishing answer variables, changing to lowercase and establishing logic.
@@ -136,9 +137,9 @@ var questSevenLimit = 6;
 var userQsevenAnswer;
 var userGuess = 0;
 var continueGame = true;
-guessArrayq7 = [];
+var guessArrayq7 = [];
 while(userGuess < questSevenLimit){
-  userQsevenAnswer = prompt('What states have I visited?');
+  userQsevenAnswer = prompt(questions[6]);
   for(var s = 0; s < places.length; s++){
     if(userQsevenAnswer === places[s]){
       console.log('correct ansser');
@@ -169,24 +170,24 @@ while(userGuess < questSevenLimit){
 document.getElementById('greeting').innerHTML = 'Welcome, ' + userName + ', let\'s see how well you know me...';
 
 document.getElementById('q1').innerHTML = questions[0];
-document.getElementById('a1').innerHTML = answerOne;
+document.getElementById('a1').innerHTML = 'Your answer: ' + answerOne;
 
 document.getElementById('q2').innerHTML = questions[1];
-document.getElementById('a2').innerHTML = answerTwo;
+document.getElementById('a2').innerHTML = 'Your answer: ' + answerTwo;
 
 document.getElementById('q3').innerHTML = questions[2];
-document.getElementById('a3').innerHTML = answerThree;
+document.getElementById('a3').innerHTML = 'Your answer: ' + answerThree;
 
 document.getElementById('q4').innerHTML = questions[3];
-document.getElementById('a4').innerHTML = answerFour;
+document.getElementById('a4').innerHTML = 'Your answer: ' + answerFour;
 
 document.getElementById('q5').innerHTML = questions[4];
-document.getElementById('a5').innerHTML = answerFive;
+document.getElementById('a5').innerHTML = 'Your answer: ' + answerFive;
 
 document.getElementById('q6').innerHTML = questions[5];
-document.getElementById('g6').innerHTML = guessArrayq6;
-document.getElementById('a6').innerHTML = answer;
+document.getElementById('g6').innerHTML = 'Your answers: ' + guessArrayq6;
+document.getElementById('a6').innerHTML = 'correct answer: ' + answer;
 
-document.getElementById('q7').innerHTML = userQsevenAnswer;
-document.getElementById('g7').innerHTML = guessArrayq7;
-document.getElementById('a6').innerHTML = places;
+document.getElementById('q7').innerHTML = questions[6];
+document.getElementById('g7').innerHTML = 'Your answers: ' + guessArrayq7;
+document.getElementById('a7').innerHTML = 'correct possible answers: ' + places;
