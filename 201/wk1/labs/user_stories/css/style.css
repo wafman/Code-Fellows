@@ -4,10 +4,21 @@ body {
   background-position: center; */
   background-color:peru;
   width: 1000px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px dashed purple;
 }
 
-body {
-  font-family: 'Courier New', Courier, monospace;
+header {
+  text-align: center;
+  border: 2px solid red;
+  margin: 0px;
+  padding: 10px;
+  background-color: aquamarine;
+}
+
+div {
+  display: inline-block;
 }
 
 h1 {
@@ -91,7 +102,7 @@ ol li {
 footer {
   color: burlywood;
   text-align: center;
-  margin: 20px;
+  margin: 0px;
   border: 2px solid black;
 }
 
@@ -120,26 +131,26 @@ div {
 
 .about_me {
   border: 2px solid black;
-  margin: 25px;
+  margin: 0px;
   padding: 10px;
 }
 
 .allLists {
   display: inline-block;
   border: 2px solid black;
-  margin: 25px;
+  margin: 0px;
   padding: 10px;
 
 }
 
 .allLists h4 {
-  width: 1000px;
+  width: inherit;
   height: 50px;
   text-align: center;
 }
 
 .allLists ul {
-  width: 250px;
+  width: 200px;
   height: 200px;
   display: inherit;
   vertical-align: text-top;
@@ -147,7 +158,7 @@ div {
 }
 
 .allLists ol {
-  width: 250px;
+  width: 200px;
   height: 200px;
   display: inherit;
   vertical-align: text-top;
@@ -155,6 +166,7 @@ div {
 }
 
 .questions_answers {
+  margin: 0px;
   border: 2px solid black;
 }
 
