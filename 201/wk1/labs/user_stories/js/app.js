@@ -27,7 +27,7 @@ var questions = [
 
 var correctAnswers = 0;
 
-var answer = 30;
+var age = 30;
 
 //establishing answer variables, changing to lowercase and establishing logic.
 
@@ -133,31 +133,37 @@ function questionSix(){
   var userGuesses = 0;
   var guessArrayq6 = [];
   
-  while( userAnswer !== answer && userGuesses < limit) {
+  //issue where a null answer is correct. try to add a check for type to insure numeric answer.
+  while( userAnswer !== age && userGuesses < limit) {
     userAnswer = prompt(questions[5]);
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-    if (userAnswer === null) {
-      alert('must enter a number');
-      userGuesses++;
-      console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-    } else if (userAnswer < answer){
-      console.log('too low');
-      userGuesses++;
-      alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4');
-      console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-    } else if ( userAnswer > answer){
-      console.log('too high');
-      userGuesses++;
-      alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.');
-      console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+    if (userAnswer !== null) {
+      // alert('must enter a number');
+      // userGuesses++;
+      // console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+      // console.log('user didnt enter number');
+      if (userAnswer < age){
+        console.log('too low');
+        userGuesses++;
+        alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4');
+        console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+      } else if ( userAnswer > age){
+        console.log('too high');
+        userGuesses++;
+        alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.');
+        console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+      } else {
+        console.log('correct answer');
+        alert('You guessed correct');
+        correctAnswers++;
+        userGuesses++;
+        console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+        guessArrayq6.push(userAnswer);
+      }
     } else {
-      console.log('correct answer');
-      alert('You guessed correct');
-      correctAnswers++;
       userGuesses++;
-      console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-      guessArrayq6.push(userAnswer);
-      break;
+      alert('must enter number');
+      console.log('didnt enter number');
     }
     guessArrayq6.push(userAnswer);
     return userAnswer;
@@ -219,7 +225,7 @@ function writePage(){
 
   document.getElementById('q6').innerHTML = questions[5];
   document.getElementById('g6').innerHTML = 'Your answers: ' + questionSix();
-  document.getElementById('a6').innerHTML = 'correct answer: ' + answer;
+  document.getElementById('a6').innerHTML = 'correct answer: ' + age;
 
   document.getElementById('q7').innerHTML = questions[6];
   document.getElementById('g7').innerHTML = 'Your answers: ' + questionSeven();
