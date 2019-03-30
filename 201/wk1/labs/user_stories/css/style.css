@@ -2,11 +2,15 @@ body {
   /* background-image: url('/img/iron-throne.jpg');
   background-repeat: no-repeat;
   background-position: center; */
-  background-color:peru;
+  color: white;
+  background-color:rgb(2, 2, 2);
   width: 1000px;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   border: 1px dashed purple;
+  font-weight: 300;
+  line-height: 1.2em;
+  letter-spacing: 1px;
 }
 
 header {
@@ -14,7 +18,7 @@ header {
   border: 2px solid red;
   margin: 0px;
   padding: 10px;
-  background-color: aquamarine;
+  height: 400px;
 }
 
 div {
@@ -60,7 +64,6 @@ h5 {
 p {
   font-size: 1em;
   text-align: left;
-  color: white;
   margin: 5px;
   text-align: center;
 }
@@ -68,14 +71,13 @@ p {
 ul {
   list-style: disc;
   margin: 20px;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
   text-decoration: underline;
   font-weight: bold;
 }
 
 ul li {
-  color: blue;
   list-style-position: inside;
   text-align: left;
   text-decoration: none;
@@ -85,14 +87,14 @@ ul li {
 ol {
   list-style: decimal;
   margin: 20px;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
   text-decoration: underline;
   font-weight: bold;
 }
 
 ol li {
-  color: blue;
+
   list-style-position: inside;
   text-align: left;
   text-decoration: none;
@@ -100,14 +102,14 @@ ol li {
 }
 
 footer {
-  color: burlywood;
+
   text-align: center;
   margin: 0px;
   border: 2px solid black;
 }
 
 footer p {
-  color: burlywood;
+
   text-align: center;
   font-weight: bold;
 }
@@ -126,21 +128,23 @@ div {
   font-size: 2em;
   font-weight: bold;
   color: green;
-  background-color: yellow;
+  line-height: 1.5em;
+
 }
 
 .about_me {
   border: 2px solid black;
   margin: 0px;
   padding: 10px;
+  height: 400px;
 }
 
 .allLists {
   display: inline-block;
-  border: 2px solid black;
+  border: 2px solid purple;
   margin: 0px;
   padding: 10px;
-
+  height: 400px;
 }
 
 .allLists h4 {
