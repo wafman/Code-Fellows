@@ -25,11 +25,67 @@ var questions = [
   'What states have I visited?'
 ];
 
+//establishing acceptable yes answers to questions
+var answerYes = [
+  'yes',
+  'y',
+  'yeah',
+  'yup'
+];
+
+//establishing acceptable no answers to questions
+var answerNo = [
+  'no',
+  'n',
+  'nope',
+  'nah'
+];
+
 var correctAnswers = 0;
 
 var age = 30;
 
+// working on bug of this function for first 5 questions using for loops
 //establishing answer variables, changing to lowercase and establishing logic.
+// function fiveQuestions() {
+//   for(var i = 0; i < questions.length; i++){
+//     console.log('question' + i + ' called');
+//     var functionAnswer = prompt(questions[i]);
+//     functionAnswer = functionAnswer.toLocaleLowerCase();
+//     //conditional check for acceptable answer
+//     //if check for questions 2
+//     if(i === questions[1]){
+//       //y stands for yes
+//       for(var y = 0; y < answerYes.length; y++){
+//         if(functionAnswer === answerYes[y]){
+//           alert('Unfortunately' + userName + ', it looks like we have gotten to know each other yet.');
+//         }
+//       }
+//       //n stands for no
+//       for(var n = 0; n < answerNo.length; n++){
+//         if(functionAnswer == answerNo[n]){
+//           alert('Correct!' + userName + ', excellent job thus far.');
+//           correctAnswers++;
+//         }
+//       }
+//     }
+//     //c stands for correct
+//     for(var c = 0; c < answerYes.length; c++){
+//       if(functionAnswer === answerYes[y]){
+//         alert('Correct!' + userName + ', excellent job thus far.');
+//         correctAnswers++;
+//       }
+//     }
+//     //w stands for wrong
+//     for(var w = 0; w < answerNo.length; n++){
+//       if(functionAnswer === answerNo[n]){
+//         alert('Unfortunately' + userName + ', it looks like we have gotten to know each other yet.');
+//       }
+//     }
+//     console.log('end of for loop question game check');
+//   }//end of for loop
+//   return functionAnswer;
+// }//end of function fiveQuestions
 
 //question 1
 function questionOne(){
@@ -44,12 +100,10 @@ function questionOne(){
   } else {
     alert('These are yes or no questions. Your options are yes/YES/y/Y or no/NO/n/N. ');
   }
-  
   console.log(userName + ' answered question 1 (' + questions[0] + ') as ' + answerOne);
   return answerOne;
 
 }
-
 
 //question 2
 function questionTwo(){
@@ -114,60 +168,39 @@ function questionFive(){
   console.log(userName + ' answered question 5 (' + questions[4] + ') as ' + answerFive);
   return answerFive;
 }
-//test for for looping all questions
-// var answers = [];
-// var isCorrect;
 
-// for( var i = 0; i < questions.length; i++){
-//   answers[i] = prompt(questions[i]);
-//   answers[i] = answers[i].toLowerCase();
-//   if(answers[i] === 'y' || answers[i] === 'yes'){
-//     alert(userName + ' your answer of ' + answers[i] + ' is ' + isCorrect)
-//   }
-// }
-
-  //question 6
+//question 6
 function questionSix(){
   var userAnswer;
   var limit = 4;
   var userGuesses = 0;
   var guessArrayq6 = [];
-  
+
   //issue where a null answer is correct. try to add a check for type to insure numeric answer.
   while( userAnswer !== age && userGuesses < limit) {
     userAnswer = prompt(questions[5]);
     console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-    if (userAnswer !== null) {
-      // alert('must enter a number');
-      // userGuesses++;
-      // console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-      // console.log('user didnt enter number');
-      if (userAnswer < age){
-        console.log('too low');
-        userGuesses++;
-        alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4');
-        console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-      } else if ( userAnswer > age){
-        console.log('too high');
-        userGuesses++;
-        alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.');
-        console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-      } else {
-        console.log('correct answer');
-        alert('You guessed correct');
-        correctAnswers++;
-        userGuesses++;
-        console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
-        guessArrayq6.push(userAnswer);
-      }
-    } else {
+    if (userAnswer < age){
+      console.log('too low');
       userGuesses++;
-      alert('must enter number');
-      console.log('didnt enter number');
+      alert(userAnswer + ' is too low. That was guess ' + userGuesses + ' out of 4');
+      console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+    } else if ( userAnswer > age){
+      console.log('too high');
+      userGuesses++;
+      alert(userAnswer + ' is too high. That was guess ' + userGuesses + ' out of 4.');
+      console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+    } else {
+      console.log('correct answer');
+      alert('You guessed correct');
+      correctAnswers++;
+      userGuesses++;
+      console.log(userAnswer + ' = user answer | ' + userGuesses + ' = user Guess');
+      guessArrayq6.push(userAnswer);
     }
     guessArrayq6.push(userAnswer);
-    return userAnswer;
   }
+  return guessArrayq6;
 }
 
 //question 7
@@ -202,10 +235,13 @@ function questionSeven(){
       continue;
     }
   }
-  return userQsevenAnswer;
+  return guessArrayq7;
 }
 
 function writePage(){
+  //below is potential use for potential for loop function at top covering first 5 questions
+  // document.getElementById('button').onclick = fiveQuestions();
+
   document.getElementById('greeting').innerHTML = 'Welcome ' + userName + ', let\'s see how well you know me...';
 
   document.getElementById('q1').innerHTML = questions[0];
@@ -232,10 +268,11 @@ function writePage(){
   document.getElementById('a7').innerHTML = 'correct possible answers: ' + places;
 
   document.getElementById('score').innerHTML = userName + ', you\'ve finished the quiz and gotten ' + correctAnswers + ' out of 7 questions correct';
-
 }
+
+
 
 //Function calls
 //Display the user's answer to the questions
-writePage();
 
+writePage();
