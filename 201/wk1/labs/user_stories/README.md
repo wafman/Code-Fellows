@@ -9,3 +9,4 @@ Expanded the user question area to reflect all the questions they've been asked 
 
 Pair programming with Jorie!
 
+Lab 5 added in a picture and restyled webpage to look more professional.
